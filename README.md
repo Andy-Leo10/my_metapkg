@@ -1,3 +1,5 @@
+# Usage of Meta Package
+
 A metapackage in ROS2 is primarily used for grouping related packages together. It doesn't compile the dependent packages automatically; instead, it serves as a convenient way to manage and install a set of related packages. When you build a metapackage, it doesn't trigger the build of its dependencies. You need to build the dependent packages separately.
 
 To build all the packages in your workspace, including the dependencies listed in your metapackage, you should run:
@@ -25,5 +27,5 @@ To ensure that the binary dependencies are installed, you can use rosdep to inst
 
 ```
 cd ~/ros2_ws
-rosdep install --from-paths src/andres-lab/my_metapkg --ignore-src -r -y
+rosdep install --from-paths src/my_metapkg --ignore-src -r -y
 ```
